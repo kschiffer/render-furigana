@@ -16,7 +16,7 @@ let _htmlparser;
 async function getKuroshiro() {
   if (!_kuroshiro) {
     try {
-      const Kuroshiro = require('kuroshiro');
+      const Kuroshiro = require('kuroshiro').default;
       const KuromojiAnalyzer = require('kuroshiro-analyzer-kuromoji');
       _kuroshiro = new Kuroshiro();
       await _kuroshiro.init(new KuromojiAnalyzer());
